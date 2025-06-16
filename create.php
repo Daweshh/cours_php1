@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // on crée la variable $stmt dans laquelle on crée la variable $pdo dans laquelle on ajoute le résultat de la requête SQL qui ajoute les noms et emails de chaque client à la base de donnée 
     $stmt = $pdo->prepare("INSERT INTO clients (nom, email) VALUES (?, ?)");
     $stmt->execute([$nom, $email]);
-
+    // affiche une confirmation si l'ajout a fonctionné
     echo "Client ajouté avec succès.";
 }
 ?>
