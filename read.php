@@ -1,10 +1,12 @@
 <!-- - Backend: -->
 
 <?php
-#nécessite une connexion en php
-require('connexion.php');
+    #nécessite une connexion en php
+    #fait appel au contenu des fichiers connexion.php et create.php
+    require('connexion.php');
 require('create.php');
-$stmt = $pdo->query("SELECT * FROM clients");
+    #on crée une variable $stmt dans laquelle on crée une variable $pdo dans laquelle on ajoute le résultat de la requête qui lit toutes les infos de la table client
+    $stmt = $pdo->query("SELECT * FROM clients");
 $clients = $stmt->fetchAll();
 ?>
 
