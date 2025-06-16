@@ -19,4 +19,3 @@ function testNum2(a) {
   // result2 = a>0 ?? null
   return result2;
 }
-//modif
